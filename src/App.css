@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+button {
+  padding: 15px 15px;
+  background-color: #153d2b;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover {
+  background-color: #27bc54;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  
+  margin-top: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.tooltip-content {
+  position: absolute;
+  margin-top: -1px;
+  z-index: 999;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 19px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tooltip-container:hover .tooltip-content {
+  opacity: 1;
+  top: calc(100% + 20px); /* Увеличиваем отступ от кнопки до примечания */
+  left: 100%;
+  transform: translateX(-50%);
+}
+
+
+
+
+
+.form-container {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+.settings-container {
+  margin-bottom: 20px;
+}
+
+.setting-item {
+  margin-bottom: 10px;
+}
+
+.setting-label {
+  font-weight: bold;
+}
+
+.setting-value {
+  margin-left: 10px;
+}
+
+
+/* TimerPage.css */
+.timer-container {
+  text-align: center; /* Выравниваем содержимое по центру */
+  margin-top: 30px; /* Отступ сверху для выравнивания по вертикали */
+}
+
+.timer {
+  font-size: 36px; /* Увеличиваем размер шрифта */
+
 }
